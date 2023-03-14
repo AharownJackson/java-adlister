@@ -9,7 +9,7 @@ import java.io.IOException;
 public class ViewProfileServlet extends HttpServlet {
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 
-        if ((boolean) request.getSession().getAttribute("user")) {
+        if (request.getSession().getAttribute("user") != null) {
             request.getRequestDispatcher("/profile.jsp").forward(request, response);
         }
         response.sendRedirect("/login");
