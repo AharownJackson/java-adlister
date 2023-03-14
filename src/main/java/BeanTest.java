@@ -15,7 +15,17 @@ public class BeanTest {
         Quote quote2 = new Quote("Bad programmers worry about the code. Good programmers worry about data structures and their relationships.", "Linus Torvalds");
         Quote quote3 = new Quote("Revenge is in God's hands, not mine.", "Hugh Glass");
 
-        List<Quote> Quotes = new ArrayList<>();
+        List<Quote> quotes = new ArrayList<>();
+        quotes.add(quote1);
+        quotes.add(quote2);
+        quotes.add(quote3);
+
+        for (Quote quote : quotes) {
+            System.out.printf("""
+                    %s  - %s
+                    
+                    """, quote.quote, quote.author);
+        }
 
     }
 }
