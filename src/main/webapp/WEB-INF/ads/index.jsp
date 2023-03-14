@@ -21,7 +21,7 @@
             <div class="column">
                 <%--                ads --%>
                 <c:forEach var="ad" items="${ads}">
-                    <div class="ads">
+                    <div>
                         <h2>${ad.title}</h2>
                         <p>${ad.description}</p>
                     </div>
