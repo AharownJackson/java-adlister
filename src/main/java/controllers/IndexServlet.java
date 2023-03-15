@@ -1,3 +1,8 @@
+package controllers;
+
+import dao.Ads;
+import dao.DaoFactory;
+import models.Ad;
 
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
