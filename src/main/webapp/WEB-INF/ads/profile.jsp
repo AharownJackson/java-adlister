@@ -2,19 +2,27 @@
 <html>
 <head>
     <jsp:include page="../../partials/head.jsp">
-        <jsp:param name="title" value="Your Profile" />
+        <jsp:param name="title" value="Your Profile"/>
     </jsp:include>
 </head>
 <body>
-    <jsp:include page="../../partials/navbar.jsp" />
+<div class="page-wrapper">
+
+    <jsp:include page="../../partials/navbar.jsp"/>
 
     <div class="container">
-        <h1>Viewing your profile.</h1>
-    </div>
+        <div class="row">
+            <div class="column">
 
-<form method="POST" action="">
-    <button id="logout">Logout</button>
-</form>
+                <h1>Welcome.</h1>
+                <form method="POST" action="/logout">
+                    <button id="logout">Logout</button>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+
 
 </body>
 </html>
