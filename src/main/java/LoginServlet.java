@@ -19,10 +19,10 @@ public class LoginServlet extends HttpServlet {
 
     @Override
     protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
-        HttpSession session = req.getSession();
         String username = req.getParameter("username");
         String password = req.getParameter("password");
         if (username.equals("admin") && password.equals("password")) {
+            HttpSession session = req.getSession();
             session.setAttribute("user", true);
             resp.sendRedirect("/profile");
         } else {

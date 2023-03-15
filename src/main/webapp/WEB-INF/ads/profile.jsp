@@ -13,16 +13,10 @@
     <div class="container">
         <div class="row">
             <div class="column">
-
                 <h1>Welcome.</h1>
-                <form method="POST" action="/logout">
-                    <button id="logout">Logout</button>
-                </form>
             </div>
         </div>
     </div>
 </div>
-
-
 </body>
 </html>
