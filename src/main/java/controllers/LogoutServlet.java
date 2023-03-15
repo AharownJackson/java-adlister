@@ -14,10 +14,4 @@ public class LogoutServlet extends HttpServlet {
         req.getSession().invalidate();
         resp.sendRedirect("/login");
     }
-
-    @Override
-    protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
-//        req.getSession().invalidate();
-//        resp.sendRedirect("/login");
-    }
 }
