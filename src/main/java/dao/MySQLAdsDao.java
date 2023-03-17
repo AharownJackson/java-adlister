@@ -1,12 +1,10 @@
 package dao;
 
-
 import models.Ad;
-
-import javax.xml.transform.Result;
 import java.sql.*;
 import java.util.ArrayList;
 import java.util.List;
+import com.mysql.cj.jdbc.Driver;
 
 public class MySQLAdsDao implements Ads {
 
@@ -14,12 +12,9 @@ public class MySQLAdsDao implements Ads {
     private Connection connection;
 
     // CONSTRUCTORS //
-    public MySQLAdsDao() {
-
-    }
-
     public MySQLAdsDao(Config config) {
         try {
+            DriverManager.registerDriver(new Driver());
             connection = DriverManager.getConnection(
                     config.getUrl(),
                     config.getUser(),
@@ -46,6 +41,7 @@ public class MySQLAdsDao implements Ads {
                         rs.getString("description")
 
                 );
+                ads.add(ad);
             }
         } catch (SQLException e) {
             throw new RuntimeException(e);
