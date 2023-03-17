@@ -72,4 +72,9 @@ public class MySQLAdsDao implements Ads {
         }
         return 0L;
     }
+
+    public static void main(String[] args) {
+        MySQLAdsDao adsDao = new MySQLAdsDao(new Config());
+        System.out.println(adsDao.all());
+    }
 }
